@@ -1,6 +1,7 @@
 package com.example.kanjidojo.viewmodel;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.example.kanjidojo.entity.JapaneseCharacter;
 import com.example.kanjidojo.persistence.JapaneseCharacterRepository;
@@ -13,16 +14,20 @@ import androidx.lifecycle.LiveData;
 
 public class QuizViewModel extends AndroidViewModel {
     private JapaneseCharacterRepository japaneseCharacterRepository;
-    private LiveData<List<JapaneseCharacter>> allJapaneseCharacters;
+    private static final String LOG_TAG = "QuizViewModel";
 
     public QuizViewModel(@NonNull Application application) {
         super(application);
+        Log.i(LOG_TAG,"Initializing QuizViewModel");
         japaneseCharacterRepository = new JapaneseCharacterRepository(application);
-        allJapaneseCharacters = japaneseCharacterRepository.getAllJapaneseCharacters();
     }
 
-    LiveData<List<JapaneseCharacter>> getAllJapaneseCharacters() {
-        return this.allJapaneseCharacters;
+    public LiveData<List<JapaneseCharacter>> getAllJapaneseCharacterss() {
+        return null;
+    }
+
+    public List<JapaneseCharacter> getAllJapaneseCharacters() {
+        return japaneseCharacterRepository.getAllJapaneseCharacters();
     }
 
     public void insert(JapaneseCharacter japaneseCharacter){

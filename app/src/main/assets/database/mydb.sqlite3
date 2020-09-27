@@ -1,0 +1,14 @@
+CREATE TABLE android_metadata (locale TEXT);
+INSERT INTO android_metadata VALUES ("en_US");
+
+CREATE TABLE JAPANESE_CHARACTERS (
+id INTEGER PRIMARY KEY,
+onyomi TEXT,
+kunyomi TEXT,
+englishTranslation TEXT,
+subunit TEXT,
+jlptlevel TEXT);
+
+INSERT INTO JAPANESE_CHARACTERS (id,kanji,onyomi,kunyomi,englishTranslation,subunit,jlptlevel) VALUES ('1','日','ニチ ジツ -','ひ -び','day, sun, Japan','1','5');
+INSERT INTO JAPANESE_CHARACTERS (id,kanji,onyomi,kunyomi,englishTranslation,subunit,jlptlevel) VALUES ('2','一','イチ イツ ヒト.','ひと-','one','1','5');
+INSERT INTO JAPANESE_CHARACTERS (id,kanji,onyomi,kunyomi,englishTranslation,subunit,jlptlevel) VALUES ('3','国','コク ク','','country','1','5');

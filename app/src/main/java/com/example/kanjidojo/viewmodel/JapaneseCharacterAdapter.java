@@ -40,7 +40,7 @@ public class JapaneseCharacterAdapter extends RecyclerView.Adapter<JapaneseChara
         }
     }
 
-    void setWords(List<JapaneseCharacter> words) {
+    public void setWords(List<JapaneseCharacter> words) {
         mWords = words;
         notifyDataSetChanged();
     }
